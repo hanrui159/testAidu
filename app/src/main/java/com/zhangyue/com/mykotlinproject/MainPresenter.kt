@@ -46,5 +46,9 @@ class MainPresenter(var mView:MainContract.View) : MainContract.Presenter {
     override fun start() {
     }
 
+    public fun lazy() {
+
+    }
+
 
 }

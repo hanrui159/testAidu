@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl_main_random"
+        android:layout_height="@dimen/random_area_height"
+        android:clickable="true"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/img_main_random"
+            android:layout_width="@dimen/empty_img_size"
+            android:layout_height="@dimen/empty_img_size"
+            android:layout_centerInParent="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_wheel"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main_list"
+        android:layout_below="@+id/rl_main_random"
+        android:layout_above="@+id/ll_main_ok"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rl_main_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_main_random"
+        android:layout_above="@+id/ll_main_ok"
+        android:background="@android:color/white">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/empty_text"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main_ok"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@android:color/white">
+
+        <Button
+            android:id="@+id/btn_main_ok"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/restart"
+            android:backgroundTint="@color/colorAccent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
